@@ -511,10 +511,10 @@ async def gcast(event):
                 except BaseException as h:
                     err += f"• {str(h)}" + "\n"
                     er += 1
-    text += f"Done in {done} chats, error in {er} chat(s)"
+    text += f"Done in {done} chats, failed in {er} chats"
     if err != "":
         open("gcast-error.log", "w+").write(err)
-        text += f"\nYou can do `{HNDLR}ul gcast-error.log` to know error report."
+        text += f"\nGcast Completed"
     await kk.edit(text)
 
 
